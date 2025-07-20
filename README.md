@@ -37,3 +37,13 @@ This is ideal for:
 - 🧱 Fully modular: each script works standalone or combined
 
 > All actions are performed via CLI using official AWS APIs and require only existing access credentials with IAM privileges.
+
+## 🛠️ Scripts Overview
+
+| Script                          | Purpose                                                                 |
+|----------------------------------|-------------------------------------------------------------------------|
+| `create_zero_node_aws.sh`       | Launch EC2 instance with admin IAM role, instance profile, and tagging |
+| `setup_zero_node_tools.sh`      | Update system, install CLI tools (AWS CLI, Git, jq, etc), setup SSH key and folders |
+| `create_zero_terraform.sh`      | Install Terraform, create S3 bucket and DynamoDB table for backend     |
+| `hcl.vault.sh`                  | Install Vault, configure `vault.hcl`, enable and start systemd service |
+
