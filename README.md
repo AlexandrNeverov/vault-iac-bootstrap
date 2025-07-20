@@ -91,6 +91,52 @@ vault operator unseal
 
 9. 🏁 Vault is ready for use. You can now store and access secrets securely via CLI or API.nstall_vault.sh
 ```
+---
+
+## 📦 Terraform Remote Backend Sample
+
+```hcl
+terraform {
+  backend "s3" {
+    bucket         = "terraform-backend-zero-<timestamp>"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks-zero-<timestamp>"
+    encrypt        = true
+  }
+}
+```
+
+---
+
+## 🧪 Requirements
+
+- AWS CLI configured and authenticated
+- SSH Key Pair (e.g., `My_mac.pem`)
+- IAM permission to create:
+  - EC2 instances
+  - IAM roles / instance profiles
+  - S3 buckets and DynamoDB tables
+
+---
+
+## 📄 License
+
+MIT – free to use, modify, share.
+
+---
+
+## 👨‍💻 Author
+
+**Alex Neverov**  
+Platform Engineer · DevOps Engineer · Cloud & Infrastructure Automation · Industry PhD
+
+- **GitHub:** [AlexandrNeverov](https://github.com/AlexandrNeverov)  
+- **LinkedIn:** [linkedin.com/in/alexneverov](https://www.linkedin.com/in/alexneverov)  
+- **Upwork:** [upwork.com/freelancers/~01c616035669bbf379](https://www.upwork.com/freelancers/~01c616035669bbf379)  
+- **Website:** [neverov-it.com](https://neverov-it.com) · [neverov-science.com](https://neverov-science.com)  
+- **Email:** [alex@neverov-it.com](mailto:alex@neverov-it.com)  
+- **Phone:** +1 (754) 236‑5715
 
 
 
