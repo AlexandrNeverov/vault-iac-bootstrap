@@ -50,7 +50,7 @@ This is ideal for:
 ## 🚀 Quick Start
 1. ✅ Launch EC2 with admin IAM role via AWS CLI:
 ```bash
-bash create_zero_node_aws.sh
+create_zero_node_aws.sh
 ```
 
 2. 🔐 Connect via SSH:
@@ -60,17 +60,17 @@ ssh -i ~/.ssh/My_mac.pem ubuntu@<PUBLIC_IP>
 
 3. 🛠️ Install CLI toolchain and system setup:
 ```bash
-bash setup_zero_node_tools.sh
+setup_zero_node_tools.sh
 ```
 
 4. 📦 Install Terraform and create backend (S3 + DynamoDB):
 ```bash
-bash create_zero_terraform.sh
+create_zero_terraform.sh
 ```
 
 5. 🔒 Install and configure Vault:
 ```bash
-bash hcl.vault.sh
+hcl.vault.sh
 ```
 
 6. 📍 Export Vault address:
