@@ -47,3 +47,51 @@ This is ideal for:
 | `create_zero_terraform.sh`      | Install Terraform, create S3 bucket and DynamoDB table for backend     |
 | `hcl.vault.sh`                  | Install Vault, configure `vault.hcl`, enable and start systemd service |
 
+## 🚀 Quick Start
+1. ✅ Launch EC2 with admin IAM role via AWS CLI:
+```bash
+bash create_zero_node_aws.sh
+```
+
+2. 🔐 Connect via SSH:
+```bash
+ssh -i ~/.ssh/My_mac.pem ubuntu@<PUBLIC_IP>
+```
+
+3. 🛠️ Install CLI toolchain and system setup:
+```bash
+bash setup_zero_node_tools.sh
+```
+
+4. 📦 Install Terraform and create backend (S3 + DynamoDB):
+```bash
+bash create_zero_terraform.sh
+```
+
+5. 🔒 Install and configure Vault:
+```bash
+bash hcl.vault.sh
+```
+
+6. 📍 Export Vault address:
+```bash
+export VAULT_ADDR=http://127.0.0.1:8200
+```
+
+7. 🧪 Check Vault status:
+```bash
+vault status
+```
+
+8. 🧷 (Optional) Initialize and unseal Vault (dev/test only):
+```bash
+vault operator init
+vault operator unseal
+```
+
+9. 🏁 Vault is ready for use. You can now store and access secrets securely via CLI or API.nstall_vault.sh
+```
+
+
+
+
